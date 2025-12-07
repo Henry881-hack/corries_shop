@@ -17,6 +17,35 @@ body {
     background-repeat: no-repeat; /* Do not repeat the image */
     background-attachment: fixed; /* Keep image fixed when scrolling */
 }
+.code-block {
+  /*
+    Sets the font size to be a minimum of 0.8rem (12.8px default),
+    fluidly scale with 0.5vw (0.5% of viewport width),
+    and a maximum of 1rem (16px default)
+  */
+  font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1rem);
+  /* Ensures line height is proportional to the font size for readability */
+  line-height: 1.5;
+}
+/* Base styles for mobile (mobile-first approach) */
+html {
+  font-size: 14px; /* Smaller base font for mobile */
+}
+
+.code-block {
+  font-size: 1rem; /* This will be 14px on mobile */
+}
+
+/* Styles for laptops/desktops (screens wider than 768px) */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px; /* Larger base font for desktops */
+  }
+  .code-block {
+    font-size: 1rem; /* This will be 16px on desktop */
+  }
+}
+
 /*login container styling*/
 .login-container {
     display: flex;
