@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Corrie Sells</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-page-container">
+        <div class="signup-card">
+            <div class="nav-container">
+                <a href="home.html" class="brand-logo">
+                    <img src="./corrie-sells-logo.png" alt="Corrie Sells Logo" class="nav-logo">
+                </a>
+            </div>
+            <div class="signup-header">
+                <h2 class="signup-title">Create Your Account</h2>
+                <p class="signup-subtitle">Join Corrie Sells and start shopping today</p>
+            </div>
+            <form class="signup-form" id="signupForm">
+                <div class="form-group">
+                    <label for="fullName" class="form-label">
+                        <i class="fas fa-user"></i> Full Name
+                    </label>
+                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobilePhone" class="form-label">
+                        <i class="fas fa-phone"></i> Mobile Phone Number
+                    </label>
+                    <input type="tel" id="mobilePhone" name="mobilePhone" class="form-input" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="e.g., 1234567890" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">
+                        <i class="fas fa-lock"></i> Password
+                    </label>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">
+                        <i class="fas fa-lock"></i> Confirm Password
+                    </label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="signup-button">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+            </form>
+            <div class="signup-footer">
+                <p class="terms-text">
+                    <input type="checkbox"> I would like to receive offers and news
+                    <br>
+                    <input type="checkbox" id="termsCheckbox" required>
+                    I agree to the<a href="terms.html" class="footer-link">Terms of Service</a> and 
+                    <a href="privacy.html" class="footer-link">Privacy Policy</a>.
+                </p>
+                <p>
+                    By providing your phone number, you agree to receive text messages from Corrie Sells. Consent is not a condition of purchase messages Freuency will vay.Msg & data rates may apply.Reply HELP for help or STOP to cancel.
+                </p>
+                <p class="login-redirect">
+                    Already have an account? <a href="index.html" class="login-link">Sign In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

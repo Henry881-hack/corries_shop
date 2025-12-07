@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Corrie Sells</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="brand-logo">
+                <img src="./corrie-sells-logo.png" alt="Corrie Sells Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html#featured">Featured</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="sneakers.html">Sneakers</a></li>
+                <li><a href="home.html#new-arrivals">New Arrivals</a></li>
+                <li><i><input type="text" placeholder="Search..." id="search-input-page"></i></li>
+            </ul>
+            <div class="nav-icons">
+                <span id="user-welcome" class="user-welcome" style="display: none;">
+                    <i class="fas fa-user"></i> <span id="username-display"></span>
+                </span>
+                <a href="signup.html" id="signup-link" class="nav-link">Signup</a>
+                <a href="index.html" id="login-link" class="nav-link">Login</a>
+                <a href="#" id="logout-link" class="nav-link logout-link" style="display: none;" onclick="logout(); return false;">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+                <a href="cart.html" class="cart-icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a1 1 0 1 1 0 2H4a1 1 0 0 1-.99-.858l-.89-5.35-1.257-5.4A.5.5 0 0 1 0 1.5zM3.5 4l.792 4.752L12.22 9.2l.779-3.9H3.5zM13.5 15a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero-banner">
+        <div class="hero-content">
+            <h1>Shopping Cart</h1>
+            <p>Review your selected items</p>
+        </div>
+    </header>
+
+    <section class="product-page-section">
+        <div class="cart-items" id="cart-items-container">
+            <!-- Cart items will be dynamically loaded here -->
+            <p class="empty-cart-message">Your cart is empty.</p>
+        </div>
+        <div class="cart-summary">
+            <h3>Cart Total: <span id="cart-total">$0.00</span></h3>
+            <button class="clear-cart-button" id="clear-cart-button">Clear All Items</button>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <section class="product-section" style="margin-top: 60px;">
+        <h2>You May Also Like</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="./jwallp.jpeg" alt="23 Legends Hoodie">
+                <h3>23 Legends Hoodie</h3>
+                <p>$99.99</p>
+                <button class="add-to-cart-button" data-product-id="feat1">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="./m1.jpeg" alt="Louis Vuitton Shoes">
+                <h3>Louis Vuitton Shoes</h3>
+                <p>$199.99</p>
+                <button class="add-to-cart-button" data-product-id="feat2">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="./13 Retr.jpeg" alt="JORDANS 13 Retr">
+                <h3>JORDANS 13 Retr</h3>
+                <p>$67.20</p>
+                <button class="add-to-cart-button" data-product-id="new1">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="./Painted AF1 Shoes -.jpeg" alt="Painted AF1 Shoes">
+                <h3>Painted AF1 Shoes</h3>
+                <p>$119.99</p>
+                <button class="add-to-cart-button" data-product-id="men3">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="./Hot Soft Women's….jpeg" alt="Ladies Gem Collection">
+                <h3>Ladies Gem Collection</h3>
+                <p>$149.99</p>
+                <button class="add-to-cart-button" data-product-id="feat3">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="./Ou Gray Blue.jpeg" alt="Nike Air">
+                <h3>Nike Air</h3>
+                <p>$120.50</p>
+                <button class="add-to-cart-button" data-product-id="sneak1">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Corrie Sells</h3>
+                <p>Fashion Made Simple. Your one-stop shop for trendy men's and women's wear, plus the hottest sneakers.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="home.html#featured">Featured</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="sneakers.html">Sneakers</a></li>
+                    <li><a href="home.html#new-arrivals">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Corrie Sells. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
